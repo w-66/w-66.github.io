@@ -1,0 +1,31 @@
+/* 设置 MIME 类型为 text/css */
+@charset "UTF-8";
+
+/* 前端一段文字既有中文又有英文，但是一个字体只有英文字母，如果想对这段话单独设置中文字体怎么设置? */
+/* 调用示例 */
+/* body {
+  // 如果一个字符不在中文的Unicode range中，那么就会尝试'MyEnglishFont'，最后如果都无法匹配，则会使用默认字体"serif"
+  font-family: 'MyChineseFont', 'MyEnglishFont', serif;  
+} */
+/* 像素字体 */
+@font-face {
+    font-family: "Pixel_01";
+    /* src: url("/%PUBLIC_URL%/static/font/en_Web437_Acer710_Mono/Web437_Acer710_Mono.woff") PUBLIC_URL只在index.html中有效 */
+    /* src: url("../font/en_Web437_Acer710_Mono/Web437_Acer710_Mono.woff") 相对路径 */
+    src: url("/static/font/en_Web437_Acer710_Mono/Web437_Acer710_Mono.woff")
+    format("woff");
+    unicode-range: U+00-FF;
+     /* 基本的拉丁字符，包括了大部分的英文字母和一些希腊字母，等等 */
+}
+@font-face {
+    font-family: "Pixel_02";
+    /* src: url("/public/static/font/fusion-pixel-monospaced/fusion-pixel-monospaced.woff2") */
+    /* src: url("../font/cn_fusion-pixel-monospaced/fusion-pixel-monospaced.woff2") */
+    src: url("/static/font/cn_fusion-pixel-monospaced/fusion-pixel-monospaced.woff2")
+    format("woff2");
+    unicode-range: U+4E00-9FFF; /* U+4E00-9FFF（中文字符）的文字 */
+}
+/* 像素字体，一个参数为英文像素字体，第二个为中文像素字体 */
+.pixel_font {
+  font-family: Pixel_01, Pixel_02, serif;
+}
