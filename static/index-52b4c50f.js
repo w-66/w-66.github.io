@@ -1,1 +1,0 @@
-import{j as n,m as o}from"./index-a54ce840.js";function r(i){return n.jsx(o.div,{whileHover:{scale:1.1,transition:{duration:.1}},whileTap:{scale:1,transition:{duration:.1}},children:i.children})}export{r as M};

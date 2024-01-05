@@ -1,0 +1,1 @@
+import{j as s,f as m,h as n}from"./index-1b6323ef.js";function r(e){const{leftComponent:o,RightComponent:t,...x}=e;return s.jsxs(m,{children:["  ",s.jsx(n,{xs:0,sm:0,md:0,lg:0,xl:5,children:o}),s.jsx(n,{xs:24,sm:24,md:24,lg:24,xl:14,...x}),s.jsx(n,{xs:0,sm:0,md:0,lg:0,xl:5,children:t})]})}export{r as L};
